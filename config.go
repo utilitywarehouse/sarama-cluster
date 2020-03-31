@@ -94,6 +94,7 @@ func NewConfig() *Config {
 	c.Group.Session.Timeout = 30 * time.Second
 	c.Group.Heartbeat.Interval = 3 * time.Second
 	c.Config.Version = minVersion
+	c.Config.Consumer.Offsets.CommitInterval = c.Config.Consumer.Offsets.AutoCommit.Interval
 	return c
 }
 
